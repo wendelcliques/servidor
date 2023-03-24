@@ -15,7 +15,7 @@ server.use(bodyParser.json());
 
 
 mercadopago.configure({
-    access_token: config.token
+    access_token: config.tokenCliques
   });
 
 
@@ -29,6 +29,12 @@ server.post('/', (req, res) => {
             quantity: 1,
           }
         ],
+        back_urls: {
+          failure: "http://www.webdesignemfoco.com/failure",
+          pending: "http://www.webdesignemfoco.com/pending",
+          success: "http://www.webdesignemfoco.com/success",
+
+        },
 
         payment_methods: {
             installments: 1
@@ -40,7 +46,7 @@ server.post('/', (req, res) => {
 
         res.send(JSON.stringify(data.response.sandbox_init_point));
       // Este valor substituirá a string "<%= global.id %>" no seu HTML
-        global.id = data.response.body.id;
+       // global.id = data.response.body.id;
       }).catch(function(error){
         console.log(error);
       });

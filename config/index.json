@@ -1,5 +1,9 @@
 {
     "publicKey": "TEST-eb0529d6-cc03-4b61-8cc5-4a6c87b5ec40",
     "token": "TEST-188754599880304-032021-dfee7382c25375b3729a23918dd11932-732504817",
+
+"publicKeyCliques": "TEST-b5a35e41-6c7d-4b9a-8685-38c21a559726",
+"tokenCliques": "TEST-2563556081274702-032217-61e6e04746ccd81423a9db5bd7353afb-1336628641",
+
     "urlRoot": "http://192.168.100.3:3000/"
 }
