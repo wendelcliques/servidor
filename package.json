@@ -1,12 +1,11 @@
 {
   "name": "servidor",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "license": "MIT",
-
   "scripts": {
     "start": "node .",
-    "dev": "nodemon index.js",
+    "dev": "nodemon api/index.js",
     "test": "echo \"Error: no test apecified\" && exit 1"
   },
   "dependencies": {
@@ -14,6 +13,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mercadopago": "^1.5.15",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "vercel": "^28.18.1"
   }
 }
