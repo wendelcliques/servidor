@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test apecified\" && exit 1"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",

@@ -21,11 +21,14 @@ mercadopago.configure({
 
 //Routes
 server.post('/', (req, res) => {
+
+console.log('req.body', req.body);
+
     let preference = {
         items: [
           {
             title: 'Meu produto',
-            unit_price: 100,
+            unit_price: parseFloat(req.body.price),
             quantity: 1,
           }
         ],
@@ -37,8 +40,15 @@ server.post('/', (req, res) => {
         },
 
         payment_methods: {
-            installments: 1
-        }
+            installments: 1,
+
+            exclude_payment_types: [
+              {"id": "ticket"},
+              {"id": "debit_card"},
+            ]
+        },
+
+       
       };
       
       mercadopago.preferences.create(preference)
