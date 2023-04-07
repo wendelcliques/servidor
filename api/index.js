@@ -22,12 +22,12 @@ mercadopago.configure({
 //Routes
 server.post('/', (req, res) => {
 
-console.log('req.body', req.body);
+console.log('req.body', req.body.title);
 
     let preference = {
         items: [
           {
-            title: 'Meu produto',
+            title: `Número escolhido: ${req.body.title}`,
             unit_price: parseFloat(req.body.price),
             quantity: 1,
           }
