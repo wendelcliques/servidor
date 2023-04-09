@@ -42,7 +42,7 @@ console.log('req.body', req.body.title);
         payment_methods: {
             installments: 1,
 
-            exclude_payment_types: [
+            excluded_payment_types: [
               {"id": "ticket"},
               {"id": "debit_card"},
             ]
