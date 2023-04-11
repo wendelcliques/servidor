@@ -19,6 +19,10 @@ mercadopago.configure({
   });
 
 
+  var response = mercadopago.payment_methods.listAll();
+  console.log('meios de pagamento', response.body);
+
+
 //Routes
 server.post('/', (req, res) => {
 
