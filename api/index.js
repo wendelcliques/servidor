@@ -15,7 +15,7 @@ server.use(bodyParser.json());
 
 
 mercadopago.configure({
-    access_token: config.tokenCliques
+    access_token: config.token
   });
 
 
