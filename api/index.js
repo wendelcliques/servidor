@@ -19,7 +19,7 @@ mercadopago.configure({
   });
 
 async function metodos() {
-  var response = await mercadopago.payment_types.listAll();
+  var response = await mercadopago.payment_methods.listAll();
   console.log('meios de pagamento', response.body);
 }
 
@@ -51,6 +51,8 @@ console.log('req.body', req.body.title);
             excluded_payment_types: [
               {"id": "ticket"},
               {"id": "debit_card"},
+              {"id": "paypal"},
+
             ]
         },
 
@@ -74,7 +76,7 @@ console.log('req.body', req.body.title);
 
 let port = process.env.PORT || 3000;
 server.listen(port, (req, res) => {
-  metodos();
+ // metodos();
     console.log('Servidor rodando');
 })
 
