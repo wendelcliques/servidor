@@ -18,15 +18,17 @@ mercadopago.configure({
     access_token: config.token
   });
 
-
-  var response = mercadopago.payment_methods.listAll();
+async function metodos() {
+  var response = await mercadopago.payment_types.listAll();
   console.log('meios de pagamento', response.body);
+}
 
 
 //Routes
 server.post('/', (req, res) => {
 
 console.log('req.body', req.body.title);
+
 
     let preference = {
         items: [
@@ -72,6 +74,7 @@ console.log('req.body', req.body.title);
 
 let port = process.env.PORT || 3000;
 server.listen(port, (req, res) => {
+  metodos();
     console.log('Servidor rodando');
 })
 
