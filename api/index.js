@@ -34,7 +34,7 @@ console.log('req.body', req.body.title);
         items: [
           {
             title: `Número escolhido: ${req.body.title}`,
-            unit_price: parseFloat(req.body.price),
+            unit_price: parseFloat(req.body.price)*100,
             quantity: 1,
           }
         ],
