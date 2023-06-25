@@ -28,13 +28,14 @@ async function metodos() {
 server.post('/', (req, res) => {
 
 console.log('req.body', req.body.title);
+console.log('req.body', req.body);
 
 
     let preference = {
         items: [
           {
             title: `Número escolhido: ${req.body.title}`,
-            unit_price: parseFloat(req.body.price)*100,
+            unit_price: parseFloat(req.body.price),
             quantity: 1,
           }
         ],
