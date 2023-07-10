@@ -50,7 +50,7 @@ console.log('req.body', req.body);
             installments: 1,
 
             excluded_payment_types: [
-              {"id": "ticket"},
+             // {"id": "ticket"},
               {"id": "debit_card"},
               {"id": "paypal"},
 
